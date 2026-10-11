@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#163c2c">
+  <meta name="description" content="Un pequeño rincón creado especialmente para ti.">
+  <title>Para alguien especial 💚</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <a href="#inicio" class="logo">para ti <span>♡</span></a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Abrir menú" aria-expanded="false"
+      aria-controls="navLinks">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#historia">Nuestra historia</a>
+      <a href="#fotos">Recuerdos</a>
+      <a href="#musica">Playlist</a>
+      <a href="#carta">Una carta</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">UN PEQUEÑO LUGAR EN EL MUNDO</p>
+        <h1>Para ti,<br><span>mi persona especial.</span></h1>
+        <p class="hero-text">
+          Entre tantos lugares, canciones y personas,
+          qué bonito que existas tú.
+        </p>
+        <a href="#historia" class="button">Descubre tu regalo ♡</a>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+        <span class="leaf leaf-one">❧</span>
+        <span class="heart">♥</span>
+        <span class="leaf leaf-two">❧</span>
+        <span class="little-star">✦</span>
+      </div>
+    </section>
+
+    <section class="intro section" id="historia">
+      <p class="eyebrow">PARA RECORDAR</p>
+      <h2>Hay personas que hacen<br>más bonito el mundo.</h2>
+      <p class="section-text">
+        Y después estás tú. Alguien que, sin necesitar grandes
+        cosas, consigue convertir momentos sencillos en recuerdos
+        que quiero guardar para siempre.
+      </p>
+      <div class="divider-heart">✿　♡　✿</div>
+    </section>
+
+    <section class="memories section" id="fotos">
+      <div class="section-heading">
+        <p class="eyebrow">NUESTROS MOMENTOS</p>
+        <h2>Pequeños recuerdos,<br>grandes sentimientos.</h2>
+        <p class="section-text">
+          Cada fotografía guarda algo que las palabras no siempre
+          consiguen explicar.
+        </p>
+      </div>
+
+      <div class="photo-grid">
+        <figure class="photo-card photo-tall">
+          <img src="fotos/foto1.jpg"
+            alt="Un recuerdo especial juntos">
+          <figcaption>Un día para guardar ♡</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img src="fotos/foto2.jpg"
+            alt="Un momento bonito">
+          <figcaption>De esos momentos simples.</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img src="fotos/foto3.jpg"
+            alt="Un recuerdo inolvidable">
+          <figcaption>Mi parte favorita del día.</figcaption>
+        </figure>
+
+        <figure class="photo-card photo-wide">
+          <img src="fotos/foto4.jpg"
+            alt="Otro recuerdo especial">
+          <figcaption>Y los que todavía nos quedan.</figcaption>
+        </figure>
+      </div>
+      <p class="photo-note">
+        ✿ Puedes reemplazar estas imágenes por tus propias fotos.
+      </p>
+    </section>
+
+    <section class="playlist section" id="musica">
+      <div class="playlist-intro">
+        <p class="eyebrow">PARA ESCUCHAR PENSANDO EN TI</p>
+        <h2>Si mis sentimientos<br>fueran canciones...</h2>
+        <p class="section-text">
+          Esta pequeña playlist es una manera de compartir contigo
+          todo eso que a veces no sé cómo decir.
+        </p>
+      </div>
+
+      <div class="music-card">
+        <div class="album-art" aria-hidden="true">
+          <span>♫</span>
+          <span class="album-heart">♡</span>
+        </div>
+
+        <div class="music-info">
+          <p class="music-label">NUESTRA PLAYLIST</p>
+          <h3>Canciones para ti</h3>
+          <p>Una colección de sentimientos en forma de música.</p>
+        </div>
+
+        <a class="button music-button"
+          href="https://open.spotify.com/"
+          target="_blank" rel="noopener noreferrer">
+          Escuchar playlist ↗
+        </a>
+      </div>
+
+      <div class="song-list">
+        <article class="song">
+          <span class="song-number">01</span>
+          <div>
+            <h3>Primera canción</h3>
+            <p>Artista favorito</p>
+          </div>
+          <span class="song-symbol">♫</span>
+        </article>
+
+        <article class="song">
+          <span class="song-number">02</span>
+          <div>
+            <h3>La canción que me recuerda a ti</h3>
+            <p>Artista favorito</p>
+          </div>
+          <span class="song-symbol">♫</span>
+        </article>
+
+        <article class="song">
+          <span class="song-number">03</span>
+          <div>
+            <h3>Nuestra canción especial</h3>
+            <p>Artista favorito</p>
+          </div>
+          <span class="song-symbol">♫</span>
+        </article>
+      </div>
+
+      <p class="music-note">
+        Los títulos son ejemplos. Puedes cambiarlos por canciones
+        reales y añadir el enlace directo de cada una.
+      </p>
+    </section>
+
+    <section class="quote-section">
+      <span class="quote-mark">“</span>
+      <blockquote>
+        Si pudiera regalarte algo en este mundo,
+        te regalaría la oportunidad de verte a través de mis ojos.
+        Solo así entenderías lo especial que eres para mí.
+      </blockquote>
+      <p>Con mucho cariño, para ti. ♡</p>
+    </section>
+
+    <section class="letter section" id="carta">
+      <p class="eyebrow">ALGO QUE QUIERO DECIRTE</p>
+      <h2>Una pequeña carta.</h2>
+
+      <div class="letter-paper">
+        <p class="letter-greeting">Hola, personita bonita:</p>
+
+        <p>
+          Hice este pequeño rincón pensando en ti. Quería regalarte
+          algo que pudieras visitar cuando quisieras recordar lo
+          importante que eres para mí.
+        </p>
+
+        <p>
+          Gracias por los momentos compartidos, por las risas,
+          por las conversaciones y por todas esas pequeñas cosas
+          que terminan significando tanto.
+        </p>
+
+        <p>
+          No sé qué nos traerá el futuro, pero me alegra que formes
+          parte de mi presente. Espero que esta página te saque
+          una sonrisa cada vez que vuelvas a ella.
+        </p>
+
+        <p class="letter-signature">
+          Con cariño infinito,<br>
+          <span>alguien que piensa en ti ♡</span>
+        </p>
+      </div>
+
+      <button class="button" id="surpriseButton">
+        Tengo algo más para ti 💚
+      </button>
+
+      <p class="surprise-message" id="surpriseMessage" hidden>
+        Si llegaste hasta aquí, recuerda que eres una personita
+        muy especial. Gracias por existir. ♡
+      </p>
+    </section>
+
+    <section class="final-section">
+      <div class="final-flower">✿</div>
+      <h2>Esto es solo un pequeño<br>pedacito de lo que siento.</h2>
+      <p>Ojalá la vida nos regale muchos recuerdos más.</p>
+      <a href="#inicio" class="back-link">Volver al principio ↑</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho con amor y un poquito de magia verde. ♡</p>
+    <p>© <span id="year"></span> — Un regalo para alguien especial.</p>
+  </footer>
+</body>
+</html>
