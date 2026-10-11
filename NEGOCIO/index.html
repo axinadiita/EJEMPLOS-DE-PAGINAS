@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Tienda de ropa y accesorios. Descubre nuestros productos y forma parte de nuestra comunidad.">
+
+    <title>Áurea | Ropa & Estilo</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="script.js"
+</head>
+
+<body>
+
+    <!-- =========================
+         BARRA DE NAVEGACIÓN
+    ========================== -->
+
+    <header class="header">
+
+        <div class="logo">
+            ÁUREA
+            <span>ROPA & ESTILO</span>
+        </div>
+
+        <button class="menu-button" id="menuButton" aria-label="Abrir menú">
+            ☰
+        </button>
+
+        <nav class="nav" id="navMenu">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#comunidad">Comunidad</a>
+            <a href="#nosotros">Nosotros</a>
+
+            <button class="cart-button" id="cartButton">
+                🛒 Carrito
+                <span id="cartCount">0</span>
+            </button>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO / INICIO
+    ========================== -->
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    NUEVA COLECCIÓN
+                </p>
+
+                <h1>
+                    Viste tu estilo.
+                    <br>
+                    <span>Sé tú misma.</span>
+                </h1>
+
+                <p>
+                    Ropa pensada para acompañarte todos los días,
+                    con diseños cómodos, modernos y únicos.
+                </p>
+
+                <a href="#productos" class="main-button">
+                    Ver colección
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BENEFICIOS
+        ========================== -->
+
+        <section class="benefits">
+
+            <div class="benefit">
+                <div class="benefit-icon">♡</div>
+                <h3>Hecho con cariño</h3>
+                <p>Seleccionamos cada producto pensando en ti.</p>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit-icon">✦</div>
+                <h3>Estilo único</h3>
+                <p>Encuentra prendas que representen tu personalidad.</p>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit-icon">✓</div>
+                <h3>Compra fácil</h3>
+                <p>Elige tus productos y contáctanos para realizar tu pedido.</p>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PRODUCTOS
+        ========================== -->
+
+        <section class="products-section" id="productos">
+
+            <div class="section-title">
+
+                <p>DESCUBRE</p>
+
+                <h2>
+                    Nuestros productos
+                </h2>
+
+                <span>
+                    Encuentra tu próximo favorito.
+                </span>
+
+            </div>
+
+
+            <!-- BUSCADOR -->
+
+            <div class="product-tools">
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Buscar productos..."
+                    >
+
+                    <span>🔍</span>
+
+                </div>
+
+
+                <div class="categories">
+
+                    <button
+                        class="category-button active"
+                        data-category="todos">
+                        Todos
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="poleras">
+                        Poleras
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="pantalones">
+                        Pantalones
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="vestidos">
+                        Vestidos
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="accesorios">
+                        Accesorios
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTOS -->
+
+            <div
+                class="products-grid"
+                id="productsContainer">
+            </div>
+
+            <p
+                class="no-results"
+                id="noResults">
+                No encontramos productos con esa búsqueda.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             COMUNIDAD
+        ========================== -->
+
+        <section class="community" id="comunidad">
+
+            <div class="section-title light">
+
+                <p>NUESTRA COMUNIDAD</p>
+
+                <h2>
+                    ¿Qué dicen quienes nos conocen?
+                </h2>
+
+                <span>
+                    Tu opinión nos ayuda a seguir creciendo.
+                </span>
+
+            </div>
+
+
+            <!-- RESUMEN DE VALORACIONES -->
+
+            <div class="rating-summary">
+
+                <div class="average-rating">
+
+                    <strong id="averageRating">
+                        0.0
+                    </strong>
+
+                    <div
+                        class="stars"
+                        id="averageStars">
+                        ☆☆☆☆☆
+                    </div>
+
+                    <span>
+                        <span id="reviewCount">0</span>
+                        valoraciones
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMENTARIOS -->
+
+            <div
+                class="reviews-container"
+                id="reviewsContainer">
+            </div>
+
+
+            <!-- FORMULARIO -->
+
+            <div class="review-form">
+
+                <h3>
+                    Déjanos tu opinión ♡
+                </h3>
+
+                <form id="reviewForm">
+
+                    <div class="form-group">
+
+                        <label for="reviewName">
+                            Tu nombre
+                        </label>
+
+                        <input
+                            type="text"
+                            id="reviewName"
+                            placeholder="Ej: Camila"
+                            required
+                            maxlength="40"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Tu valoración
+                        </label>
+
+                        <div
+                            class="rating-input"
+                            id="ratingInput">
+
+                            <button type="button" data-rating="1">☆</button>
+                            <button type="button" data-rating="2">☆</button>
+                            <button type="button" data-rating="3">☆</button>
+                            <button type="button" data-rating="4">☆</button>
+                            <button type="button" data-rating="5">☆</button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="reviewText">
+                            Comentario
+                        </label>
+
+                        <textarea
+                            id="reviewText"
+                            placeholder="Cuéntanos qué te pareció..."
+                            required
+                            maxlength="300">
+                        </textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="main-button">
+                        Publicar valoración
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NOSOTROS
+        ========================== -->
+
+        <section class="about" id="nosotros">
+
+            <div class="about-content">
+
+                <p class="small-title">
+                    CONÓCENOS
+                </p>
+
+                <h2>
+                    Más que ropa,
+                    <br>
+                    una forma de expresarte.
+                </h2>
+
+                <p>
+                    En Áurea creemos que la ropa es una manera
+                    de mostrar quién eres. Por eso buscamos
+                    prendas que combinen comodidad, personalidad
+                    y estilo.
+                </p>
+
+                <p>
+                    Somos un pequeño emprendimiento que crece
+                    gracias a nuestra comunidad y a cada persona
+                    que decide confiar en nosotros.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NEWSLETTER
+        ========================== -->
+
+        <section class="newsletter">
+
+            <h2>
+                Únete a nuestra comunidad ♡
+            </h2>
+
+            <p>
+                Recibe novedades, nuevos productos y promociones.
+            </p>
+
+            <form id="newsletterForm">
+
+                <input
+                    type="email"
+                    id="emailInput"
+                    placeholder="Tu correo electrónico"
+                    required
+                >
+
+                <button type="submit">
+                    Suscribirme
+                </button>
+
+            </form>
+
+            <p
+                class="newsletter-message"
+                id="newsletterMessage">
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         CARRITO
+    ========================== -->
+
+    <div
+        class="cart-overlay"
+        id="cartOverlay">
+
+        <aside class="cart">
+
+            <div class="cart-header">
+
+                <h2>
+                    Tu carrito
+                </h2>
+
+                <button
+                    id="closeCart"
+                    aria-label="Cerrar carrito">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div
+                class="cart-items"
+                id="cartItems">
+            </div>
+
+
+            <div class="cart-footer">
+
+                <div class="cart-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="cartTotal">
+                        $0
+                    </strong>
+
+                </div>
+
+                <button
+                    class="checkout-button"
+                    id="checkoutButton">
+                    Pedir por WhatsApp
+                </button>
+
+                <button
+                    class="clear-cart"
+                    id="clearCart">
+                    Vaciar carrito
+                </button>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            ÁUREA
+        </div>
+
+        <p>
+            Ropa & estilo para personas únicas.
+        </p>
+
+        <div class="social-links">
+
+            <a href="#" aria-label="Instagram">
+                Instagram
+            </a>
+
+            <a href="#" aria-label="Facebook">
+                Facebook
+            </a>
+
+            <a href="#" aria-label="TikTok">
+                TikTok
+            </a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Áurea. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         TOAST
+    ========================== -->
+
+    <div
+        class="toast"
+        id="toast">
+        Producto agregado ♡
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
